@@ -15,5 +15,5 @@ jobs:
       uses: steven0351/publish-jazzy-docs@initial-implementation
       with:
         personal_access_token: ${{ secrets.ACCESS_TOKEN }}
-        jazzy_args: "--author Steven Sherry -o sweet/sweet/documentation --theme fullwidth"
+        jazzy_args: "--author Steven Sherry --output sweet/sweet/documentation --theme fullwidth"
 
