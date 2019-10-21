@@ -15,5 +15,5 @@ jobs:
       uses: steven0351/publish-jazzy-docs@initial-implementation
       with:
         personal_access_token: ${{ secrets.ACCESS_TOKEN }}
-        jazzy_args: "--output sweet/sweet/documentation"
+        jazzy_args: "-o sweet/sweet/documentation"
 
