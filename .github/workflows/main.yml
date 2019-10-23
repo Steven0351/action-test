@@ -12,9 +12,9 @@ jobs:
     - name: Switch to Xcode 11
       run: sudo xcode-select --switch /Applications/Xcode_11.app/Contents/Developer
     - name: Generate Jazzy Docs
-      uses: steven0351/publish-jazzy-docs@initial-implementation
+      uses: sdfnz/publish-jazzy-docs@master
       with:
         personal_access_token: ${{ secrets.ACCESS_TOKEN }}
         version: 0.11.0
-        args: "--author Steven Sherry --output sweet/sweet/documentation --theme fullwidth"
+        config: .jazzy.yml
 
