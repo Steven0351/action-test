@@ -16,5 +16,6 @@ jobs:
       with:
         personal_access_token: ${{ secrets.ACCESS_TOKEN }}
         version: 0.11.0
+        branch: master
         config: .jazzy.yml
 
