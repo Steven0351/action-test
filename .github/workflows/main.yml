@@ -6,16 +6,15 @@ on:
 
 jobs:
   deploy_docs:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Switch to Xcode 11
-      run: sudo xcode-select --switch /Applications/Xcode_11.app/Contents/Developer
+    - name: Switch to Xcode 12
+      run: sudo xcode-select --switch /Applications/Xcode_12.app/Contents/Developer
     - name: Generate Jazzy Docs
-      uses: borchero/publish-jazzy-docs@master
+      uses: Steven0351/publish-jazzy-docs@devcontainer
       with:
-        personal_access_token: ${{ secrets.ACCESS_TOKEN }}
+        personal_access_token: ${{ secrets.GITHUB_TOKEN }}
         version: 0.11.0
-        branch: develop
         config: .jazzy.yml
 
